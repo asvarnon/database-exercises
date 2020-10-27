@@ -6,10 +6,10 @@ DROP TABLE IF EXISTS albums;
 CREATE TABLE IF NOT EXISTS albums(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     artist VARCHAR(40),
-    name VARCHAR(20),
-    release_date DATE,
+    name VARCHAR(60),
+    release_date INT,
     sales DOUBLE,
-    genre VARCHAR(20),
+    genre VARCHAR(40),
     PRIMARY KEY (id)
 );
 DESCRIBE albums;
