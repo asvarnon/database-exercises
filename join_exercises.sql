@@ -27,4 +27,14 @@ FROM employees AS e
 WHERE dm.to_date = '9999-01-01' AND s.to_date = '9999-01-01'
 ORDER BY salary;
 
+# select * from departments where dept_name = 'Customer Service';
+# exercise we were told to skip
+SELECT t.title as 'Title', COUNT(t.emp_no) as 'Count'
+from titles as t
+    join dept_emp as de on t.emp_no = de.emp_no
+    join departments d on de.dept_no = d.dept_no
+where de.dept_no = 'd009'
+AND t.to_date = '9999-01-01'
+AND de.to_date = '9999-01-01'
+group by t.title;
 
