@@ -51,7 +51,7 @@ ORDER BY last_name;
 
 SELECT COUNT(*), gender
 FROM employees
-WHERE first_name LIKE 'Irena' OR first_name LIKE 'Vidya' OR first_name LIKE 'Maya'
+WHERE first_name IN ('Irena', 'Vidya', 'Maya')
 GROUP BY gender;
 
 
