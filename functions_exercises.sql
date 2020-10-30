@@ -32,8 +32,12 @@ WHERE first_name LIKE 'E%'
   AND last_name LIKE '%e'
 ORDER BY emp_no DESC;
 
-# SELECT CONCAT(first_name, ' ', last_name) AS name, birth_date AS 'Birthday', hire_date AS 'Date Hired'
-# FROM employees
+
+SELECT CONCAT(first_name, ' ', last_name) AS name, DATEDIFF(CURDATE(), hire_date)
+FROM employees
+WHERE birth_date LIKE '%%%%-12-25'
+  AND hire_date > '1990-01-01'
+ORDER BY birth_date, hire_date DESC;
 
 
 
